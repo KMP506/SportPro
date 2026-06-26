@@ -12,7 +12,7 @@ import java.time.Period;
 public class Persona {
     
     protected String ID;
-    protected String Nombre;
+    protected String nombre;
     protected LocalDate fechaNacimiento;
     protected String Telefono;
 
@@ -21,11 +21,11 @@ public class Persona {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
-    public LocalDate getFechaNacimiento() {
-        return fechaNacimiento;
+    public int getFechaNacimiento() {
+        return calcularEdad();
     }
 
     public String getTelefono() {
@@ -43,11 +43,19 @@ public class Persona {
 
     public Persona(String ID, String Nombre, LocalDate fechaNacimiento, String Telefono) {
         this.ID = ID;
-        this.Nombre = Nombre;
+        this.nombre = Nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.Telefono = Telefono;
     }
     
+    @Override
+    public String toString(){
+        return "Nombre: " + nombre + 
+                "\nEdad: " + this.calcularEdad()+ 
+                "\nFecha=" + fechaNacimiento  +
+                "\nTelefono: " + Telefono;
+    
+}
     
     
     

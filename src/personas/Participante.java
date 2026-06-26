@@ -28,7 +28,11 @@ public class Participante extends Persona{
         this.DisciplinaInscrita = DisciplinaInscrita;
     }
     
-    
+    @Override
+    public String toString(){
+        return  "Participante: " + super.toString() +
+                "\nDisciplina: " + DisciplinaInscrita;
+      }
     
     
 }

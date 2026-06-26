@@ -38,5 +38,11 @@ public class Responsable extends Persona{
         this.añosExperiencia = AñosExperiencia;
     }
     
+    @Override
+      public String toString(){
+        return  "Responsable: " + super.toString() +
+                "\nEspecialidad: " + especialidad+
+                "\nAños de Experiencia: " + añosExperiencia;
+      }
     
 }
