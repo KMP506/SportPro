@@ -11,7 +11,7 @@ package disciplinas;
 public class Voleibol extends Categoria{
 
     public Voleibol(String nombre, int capacidadMaxima) {
-        super(nombre, "Voleybol", capacidadMaxima);
+        super(nombre, "Infantil,Juvenil,Adulta", capacidadMaxima);
     }
 
     @Override

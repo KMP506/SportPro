@@ -11,7 +11,7 @@ package disciplinas;
 public class Futbol extends Categoria {
     
     public Futbol(String nombre, int capacidadMaxima) {
-        super(nombre, "Futbol", capacidadMaxima);
+        super(nombre, "Infantil,Juvenil,Adulta", capacidadMaxima);
     }
 
     @Override

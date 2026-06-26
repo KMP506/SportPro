@@ -10,7 +10,7 @@ package disciplinas;
  */
 public class Baloncesto extends Categoria {
      public Baloncesto(String nombre, int capacidadMaxima) {
-        super(nombre, "Baloncesto", capacidadMaxima);
+        super(nombre, "Juvenil,Adulta", capacidadMaxima);
     }
 
     @Override
