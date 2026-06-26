@@ -18,8 +18,7 @@ public class Participante extends Persona{
         super(ID, Nombre, fechaNacimiento, Telefono);
         this.DisciplinaInscrita = DisciplinaInscrita;
     }
-    
-   
+       
 
     public String getDisciplinaInscrita() {
         return DisciplinaInscrita;
