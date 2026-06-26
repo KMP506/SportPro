@@ -8,6 +8,14 @@ package disciplinas;
  *
  * @author kevin
  */
-public class Futbol {
+public class Futbol extends Categoria {
     
+    public Futbol(String nombre, int capacidadMaxima) {
+        super(nombre, "Futbol", capacidadMaxima);
+    }
+
+    @Override
+    public String toString() {
+        return "--Futbol--" + super.toString();
+    }
 }

@@ -36,7 +36,7 @@ public class Categoria {
     }
     
     public String toString(){
-       return "Nombre:"+nombre+"\nCategoria:"+categoria+"\nCapacidad Maxima:"+capacidadMaxima;
+       return "\nNombre:"+nombre+"\nCategoria:"+categoria+"\nCapacidad Maxima:"+capacidadMaxima;
    }
     
 }

@@ -8,6 +8,14 @@ package disciplinas;
  *
  * @author kevin
  */
-public class Voleibol {
-    
+public class Voleibol extends Categoria{
+
+    public Voleibol(String nombre, int capacidadMaxima) {
+        super(nombre, "Voleybol", capacidadMaxima);
+    }
+
+    @Override
+    public String toString() {
+        return "\n--Voleybol--" + super.toString();
+    }
 }
