@@ -1,42 +1,53 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package disciplinas;
 
-/**
- *
- * @author kevin
- */
+import personas.Participante;
+
 public class Categoria {
+
     protected String nombre;
     protected String categoria;
     protected int capacidadMaxima;
-    
-    public String getNombre(){
-        return this.nombre;
+    protected Participante[] participantes;
+    protected int cantidadParticipantes;
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public int getCapacidadMaxima() {
+        return capacidadMaxima;
+    }
+
+    public Participante[] getParticipantes() {
+        return participantes;
     }
     
-    public String getCategoria(){
-        return this.categoria;
+    public boolean agregarParticipante(Participante participante) {
+        if (cantidadParticipantes >= capacidadMaxima) {
+            return false;
+        }
+        participantes[cantidadParticipantes] = participante;
+        cantidadParticipantes++;
+        return true;
     }
-    
-    public int getCapacidadMaxima(){
-        return this.capacidadMaxima;
+
+        public Categoria(String nombre, String categoria, int capacidadMaxima) {
+        this.nombre = nombre;
+        this.categoria = categoria;
+        this.capacidadMaxima = capacidadMaxima;
+
+        participantes = new Participante[capacidadMaxima];
+        cantidadParticipantes = 0;
     }
-    
-    public void setCapacidadMaxima(int capacidadMaxima){
-        this.capacidadMaxima=capacidadMaxima;
+
+    public String toString() {
+        return "Nombre: " + nombre +
+               "\nCategoria: " + categoria +
+               "\nCapacidad Maxima: " + capacidadMaxima +
+               "\nParticipantes registrados: " + cantidadParticipantes;
     }
-    
-    public Categoria(String nombre,String categoria, int capacidadMaxima){
-        this.nombre=nombre;
-        this.categoria=categoria;
-        this.capacidadMaxima=capacidadMaxima;
-    }
-    
-    public String toString(){
-       return "\nNombre:"+nombre+"\nCategoria:"+categoria+"\nCapacidad Maxima:"+capacidadMaxima;
-   }
-    
 }
