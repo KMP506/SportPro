@@ -4,6 +4,7 @@
  */
 package personas;
 import java.time.LocalDate;
+import java.time.Period;
 /**
  *
  * @author isaac
@@ -33,6 +34,11 @@ public class Persona {
 
     public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
+    }
+    
+    public int calcularEdad(){
+        LocalDate fechaHoy=LocalDate.now();
+        return Period.between(fechaNacimiento, fechaHoy).getYears();
     }
 
     public Persona(String ID, String Nombre, LocalDate fechaNacimiento, String Telefono) {
